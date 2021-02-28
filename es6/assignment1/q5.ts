@@ -1,7 +1,7 @@
-let q5 = function(name1, ...usrar){
+let q5 = (name1, ...usrar) => {
     console.log(name1)
     console.log(arrayOfUsers)
-    for(let i in usrar){
+    for (let i in usrar) {
         console.log(usrar[i])
     }
 }

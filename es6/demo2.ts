@@ -1,6 +1,6 @@
 let firsname='abhishek'
 let lastname='bondwal'
-let person = { 
+let npm install -g const tslintperson = { 
     firsname:firsname,
     lastname:lastname
 }
