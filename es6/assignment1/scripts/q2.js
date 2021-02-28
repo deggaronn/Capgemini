@@ -6,5 +6,5 @@ var q2 = function () {
     }
     return i;
 };
-q2();
+console.log(q2);
 //# sourceMappingURL=q2.js.map
