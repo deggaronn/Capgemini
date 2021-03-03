@@ -9,6 +9,14 @@ import { Component, OnInit } from '@angular/core';
 <div [ngClass]="messageClasses">
   {{name}}
 </div>
+<div [style.color]="hasError ? 'red' : 'green'"> hello {{name}}</div>
+<div [style.background-color]="stylBind"> style binding</div>
+<button (click) = "onclick($event)"> click me to check the event</button>
+<button (click) = "greeting='welcome abhishek'"> click me to print greet </button>
+{{greeting}}
+<input #myLog type="text">
+<button (click)='logValue(myLog.value)'>click me to print value of input in comsole</button>
+<button (click)='logValue(myLog)'>click me to print input type in console</button>
   `,
   styles: [`.text-danger {
     color: red;
@@ -31,9 +39,19 @@ export class TestComponent implements OnInit {
     'text-danger' : this.hasError,
     'text-special' : this.isSpecial
   };
+  public stylBind = 'orange';
+  public greeting = '';
   constructor() { }
 
   ngOnInit(): void {
   }
-
+// tslint:disable-next-line:typedef
+public onclick(event){
+  console.log('written after click');
+  this.greeting = event.type;
+}
+// tslint:disable-next-line:typedef
+logValue(value){
+  console.log(value);
+}
 }
