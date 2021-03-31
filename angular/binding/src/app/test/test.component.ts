@@ -17,6 +17,8 @@ import { Component, OnInit } from '@angular/core';
 <input #myLog type="text">
 <button (click)='logValue(myLog.value)'>click me to print value of input in comsole</button>
 <button (click)='logValue(myLog)'>click me to print input type in console</button>
+<input type = "text" [(ngModel)]="name">
+{{name}}
   `,
   styles: [`.text-danger {
     color: red;
@@ -30,7 +32,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestComponent implements OnInit {
 
-  name = 'abhishek';
+  name = '';
   getUrl = window.location.href;
   public hasError = true;
   public isSpecial = true;
