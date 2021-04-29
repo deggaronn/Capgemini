@@ -2,7 +2,7 @@
 <form *ngIf="CurrentCar.length!=0" #editCarForm="ngForm" (ngSubmit) ="updateCar(editCarForm)" class="car" ngNativeValidate>
 
     <div class="form-group">
-      <label for="name">1. Car Name</label>
+      <label for="name">1. Car Comany</label>
       <input type="text" class="form-control" id="name" name="name"  [ngModel]="CurrentCar[0].name" required>
     </div>
 
